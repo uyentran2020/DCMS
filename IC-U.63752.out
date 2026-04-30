@@ -1,0 +1,970 @@
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=5.02598, w=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+w          : 2
+f_value    : 240.790000
+queries    : 1282
+time_sec   : 0.509697
+size(S)    : 22
+rss0_kb    : 4884
+peak_kb    : 6352
+mem_kb     : 1468  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=5.02598, w=2, eps=0.1, alpha=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 263.570000
+queries    : 81023
+time_sec   : 31.926288
+size(S)    : 26
+rss0_kb    : 4912
+peak_kb    : 9044
+mem_kb     : 4132  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=5.02598, eps=0.1, mode=best(A,G)
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+eps        : 0.100000
+f_value    : 287.950000
+queries    : 46862
+time_sec   : 18.806310
+size(S)    : 28
+rss0_kb    : 4956
+peak_kb    : 9160
+mem_kb     : 4204  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=5.02598, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+eps        : 0.100000
+f_value    : 280.860000
+queries    : 99875
+time_sec   : 38.195736
+size(S)    : 34
+rss0_kb    : 5036
+peak_kb    : 9424
+mem_kb     : 4388  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=5.02598, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+eps        : 0.100000
+f_value    : 268.380000
+queries    : 2306991
+time_sec   : 698.194929
+size(S)    : 28
+rss0_kb    : 4860
+peak_kb    : 9376
+mem_kb     : 4516  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=5.02598
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.010000
+total_cost : 502.598324
+B          : 5.025983
+f_value    : 218.030000
+queries    : 82702
+time_sec   : 25.511313
+size(S)    : 20
+rss0_kb    : 4948
+peak_kb    : 6800
+mem_kb     : 1852  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=10.052, w=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+w          : 2
+f_value    : 270.420000
+queries    : 2014
+time_sec   : 0.849609
+size(S)    : 35
+rss0_kb    : 5028
+peak_kb    : 6508
+mem_kb     : 1480  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=10.052, w=2, eps=0.1, alpha=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 329.190000
+queries    : 91158
+time_sec   : 37.103724
+size(S)    : 52
+rss0_kb    : 4952
+peak_kb    : 9796
+mem_kb     : 4844  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=10.052, eps=0.1, mode=best(A,G)
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+eps        : 0.100000
+f_value    : 316.700000
+queries    : 71375
+time_sec   : 30.285431
+size(S)    : 42
+rss0_kb    : 5032
+peak_kb    : 9264
+mem_kb     : 4232  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=10.052, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+eps        : 0.100000
+f_value    : 281.330000
+queries    : 117590
+time_sec   : 46.087773
+size(S)    : 33
+rss0_kb    : 5012
+peak_kb    : 9172
+mem_kb     : 4160  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=10.052, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+eps        : 0.100000
+f_value    : 301.810000
+queries    : 2215360
+time_sec   : 717.136222
+size(S)    : 49
+rss0_kb    : 4952
+peak_kb    : 8788
+mem_kb     : 3836  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=10.052
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.020000
+total_cost : 502.598324
+B          : 10.051966
+f_value    : 250.540000
+queries    : 113278
+time_sec   : 41.159131
+size(S)    : 26
+rss0_kb    : 5052
+peak_kb    : 8216
+mem_kb     : 3164  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=15.0779, w=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+w          : 2
+f_value    : 254.480000
+queries    : 2014
+time_sec   : 0.837780
+size(S)    : 21
+rss0_kb    : 4916
+peak_kb    : 8428
+mem_kb     : 3512  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=15.0779, w=2, eps=0.1, alpha=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 309.300000
+queries    : 117914
+time_sec   : 51.588975
+size(S)    : 43
+rss0_kb    : 4912
+peak_kb    : 9996
+mem_kb     : 5084  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=15.0779, eps=0.1, mode=best(A,G)
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+eps        : 0.100000
+f_value    : 290.870000
+queries    : 62824
+time_sec   : 25.641450
+size(S)    : 33
+rss0_kb    : 4996
+peak_kb    : 9052
+mem_kb     : 4056  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=15.0779, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+eps        : 0.100000
+f_value    : 247.990000
+queries    : 114434
+time_sec   : 43.763937
+size(S)    : 25
+rss0_kb    : 4996
+peak_kb    : 9004
+mem_kb     : 4008  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=15.0779, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+eps        : 0.100000
+f_value    : 321.620000
+queries    : 2985896
+time_sec   : 1162.473616
+size(S)    : 59
+rss0_kb    : 5024
+peak_kb    : 10856
+mem_kb     : 5832  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=15.0779
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.030000
+total_cost : 502.598324
+B          : 15.077950
+f_value    : 315.560000
+queries    : 191104
+time_sec   : 77.014679
+size(S)    : 60
+rss0_kb    : 4860
+peak_kb    : 8984
+mem_kb     : 4124  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=20.1039, w=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+w          : 2
+f_value    : 270.800000
+queries    : 2014
+time_sec   : 0.914355
+size(S)    : 25
+rss0_kb    : 5012
+peak_kb    : 6488
+mem_kb     : 1476  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=20.1039, w=2, eps=0.1, alpha=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 345.050000
+queries    : 139070
+time_sec   : 62.245702
+size(S)    : 58
+rss0_kb    : 5028
+peak_kb    : 10328
+mem_kb     : 5300  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=20.1039, eps=0.1, mode=best(A,G)
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+eps        : 0.100000
+f_value    : 260.610000
+queries    : 58019
+time_sec   : 23.311578
+size(S)    : 24
+rss0_kb    : 5036
+peak_kb    : 8924
+mem_kb     : 3888  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=20.1039, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+eps        : 0.100000
+f_value    : 285.860000
+queries    : 145139
+time_sec   : 59.873423
+size(S)    : 38
+rss0_kb    : 5008
+peak_kb    : 9528
+mem_kb     : 4520  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=20.1039, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+eps        : 0.100000
+f_value    : 336.170000
+queries    : 2966695
+time_sec   : 1196.264588
+size(S)    : 67
+rss0_kb    : 4916
+peak_kb    : 11204
+mem_kb     : 6288  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=20.1039
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.040000
+total_cost : 502.598324
+B          : 20.103933
+f_value    : 258.480000
+queries    : 120842
+time_sec   : 43.141759
+size(S)    : 33
+rss0_kb    : 4952
+peak_kb    : 7732
+mem_kb     : 2780  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=25.1299, w=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+w          : 2
+f_value    : 285.360000
+queries    : 2014
+time_sec   : 0.927654
+size(S)    : 31
+rss0_kb    : 4864
+peak_kb    : 6324
+mem_kb     : 1460  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=25.1299, w=2, eps=0.1, alpha=2
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 332.540000
+queries    : 157927
+time_sec   : 74.422138
+size(S)    : 56
+rss0_kb    : 4860
+peak_kb    : 12132
+mem_kb     : 7272  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=25.1299, eps=0.1, mode=best(A,G)
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+eps        : 0.100000
+f_value    : 313.550000
+queries    : 73672
+time_sec   : 31.537442
+size(S)    : 38
+rss0_kb    : 5052
+peak_kb    : 9096
+mem_kb     : 4044  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=25.1299, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+eps        : 0.100000
+f_value    : 309.100000
+queries    : 139880
+time_sec   : 56.947568
+size(S)    : 41
+rss0_kb    : 4912
+peak_kb    : 9764
+mem_kb     : 4852  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=25.1299, eps=0.1
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+eps        : 0.100000
+f_value    : 355.370000
+queries    : 2819445
+time_sec   : 1134.776173
+size(S)    : 73
+rss0_kb    : 4948
+peak_kb    : 10744
+mem_kb     : 5796  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=25.1299
+Graph      : n=1005, m=32770, undirected=0
+B_factor   : 0.050000
+total_cost : 502.598324
+B          : 25.129916
+f_value    : 318.840000
+queries    : 160028
+time_sec   : 61.639858
+size(S)    : 48
+rss0_kb    : 4984
+peak_kb    : 8140
+mem_kb     : 3156  (peak-baseline)
+CSV        : appended to email.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=20.1957, w=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+w          : 2
+f_value    : 803.740000
+queries    : 8082
+time_sec   : 8.649401
+size(S)    : 27
+rss0_kb    : 11788
+peak_kb    : 21272
+mem_kb     : 9484  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=20.1957, w=2, eps=0.1, alpha=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 991.330000
+queries    : 533553
+time_sec   : 581.200152
+size(S)    : 55
+rss0_kb    : 11640
+peak_kb    : 23712
+mem_kb     : 12072  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=20.1957, eps=0.1, mode=best(A,G)
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+eps        : 0.100000
+f_value    : 969.080000
+queries    : 314101
+time_sec   : 411.153931
+size(S)    : 43
+rss0_kb    : 11520
+peak_kb    : 23580
+mem_kb     : 12060  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=20.1957, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+eps        : 0.100000
+f_value    : 906.360000
+queries    : 751018
+time_sec   : 840.860796
+size(S)    : 34
+rss0_kb    : 11588
+peak_kb    : 23308
+mem_kb     : 11720  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=20.1957, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+eps        : 0.100000
+f_value    : 876.300000
+queries    : 14212029
+time_sec   : 16864.589985
+size(S)    : 86
+rss0_kb    : 11636
+peak_kb    : 24736
+mem_kb     : 13100  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=20.1957
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.010000
+total_cost : 2019.567074
+B          : 20.195671
+f_value    : 854.360000
+queries    : 884452
+time_sec   : 984.427107
+size(S)    : 38
+rss0_kb    : 11704
+peak_kb    : 24156
+mem_kb     : 12452  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=40.3913, w=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+w          : 2
+f_value    : 774.190000
+queries    : 8082
+time_sec   : 9.147096
+size(S)    : 58
+rss0_kb    : 11648
+peak_kb    : 21724
+mem_kb     : 10076  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=40.3913, w=2, eps=0.1, alpha=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 1128.740000
+queries    : 620828
+time_sec   : 761.479348
+size(S)    : 110
+rss0_kb    : 11712
+peak_kb    : 25040
+mem_kb     : 13328  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=40.3913, eps=0.1, mode=best(A,G)
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+eps        : 0.100000
+f_value    : 1049.750000
+queries    : 422084
+time_sec   : 575.748766
+size(S)    : 64
+rss0_kb    : 11596
+peak_kb    : 25004
+mem_kb     : 13408  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=40.3913, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+eps        : 0.100000
+f_value    : 1068.560000
+queries    : 853058
+time_sec   : 1000.890631
+size(S)    : 62
+rss0_kb    : 11712
+peak_kb    : 24952
+mem_kb     : 13240  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=40.3913, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+eps        : 0.100000
+f_value    : 892.970000
+queries    : 14140131
+time_sec   : 18560.858759
+size(S)    : 114
+rss0_kb    : 11516
+peak_kb    : 23688
+mem_kb     : 12172  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=40.3913
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.020000
+total_cost : 2019.567074
+B          : 40.391341
+f_value    : 917.720000
+queries    : 592374
+time_sec   : 539.976463
+size(S)    : 42
+rss0_kb    : 11548
+peak_kb    : 23252
+mem_kb     : 11704  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=60.587, w=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+w          : 2
+f_value    : 842.040000
+queries    : 8082
+time_sec   : 9.332496
+size(S)    : 47
+rss0_kb    : 11660
+peak_kb    : 21956
+mem_kb     : 10296  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=60.587, w=2, eps=0.1, alpha=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 1167.090000
+queries    : 685901
+time_sec   : 885.252300
+size(S)    : 149
+rss0_kb    : 11516
+peak_kb    : 24824
+mem_kb     : 13308  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=60.587, eps=0.1, mode=best(A,G)
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+eps        : 0.100000
+f_value    : 1016.640000
+queries    : 394501
+time_sec   : 537.683472
+size(S)    : 52
+rss0_kb    : 11640
+peak_kb    : 23580
+mem_kb     : 11940  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=60.587, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+eps        : 0.100000
+f_value    : 992.330000
+queries    : 779942
+time_sec   : 866.149092
+size(S)    : 54
+rss0_kb    : 11744
+peak_kb    : 25012
+mem_kb     : 13268  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=60.587, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+eps        : 0.100000
+f_value    : 893.340000
+queries    : 14101584
+time_sec   : 18806.845329
+size(S)    : 131
+rss0_kb    : 11592
+peak_kb    : 24252
+mem_kb     : 12660  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=60.587
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.030000
+total_cost : 2019.567074
+B          : 60.587012
+f_value    : 789.270000
+queries    : 774258
+time_sec   : 785.172059
+size(S)    : 43
+rss0_kb    : 11456
+peak_kb    : 23228
+mem_kb     : 11772  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=80.7827, w=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+w          : 2
+f_value    : 816.030000
+queries    : 8082
+time_sec   : 8.840299
+size(S)    : 62
+rss0_kb    : 11656
+peak_kb    : 21396
+mem_kb     : 9740  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=80.7827, w=2, eps=0.1, alpha=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 1225.850000
+queries    : 697154
+time_sec   : 927.935204
+size(S)    : 178
+rss0_kb    : 11640
+peak_kb    : 25352
+mem_kb     : 13712  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=80.7827, eps=0.1, mode=best(A,G)
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+eps        : 0.100000
+f_value    : 1099.530000
+queries    : 502030
+time_sec   : 721.088061
+size(S)    : 75
+rss0_kb    : 11660
+peak_kb    : 23764
+mem_kb     : 12104  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=80.7827, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+eps        : 0.100000
+f_value    : 1055.340000
+queries    : 1099639
+time_sec   : 1371.172006
+size(S)    : 62
+rss0_kb    : 11656
+peak_kb    : 25568
+mem_kb     : 13912  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=80.7827, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+eps        : 0.100000
+f_value    : 1027.010000
+queries    : 14022338
+time_sec   : 19679.174868
+size(S)    : 106
+rss0_kb    : 11632
+peak_kb    : 24420
+mem_kb     : 12788  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=80.7827
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.040000
+total_cost : 2019.567074
+B          : 80.782683
+f_value    : 912.540000
+queries    : 734808
+time_sec   : 739.877139
+size(S)    : 47
+rss0_kb    : 11832
+peak_kb    : 24256
+mem_kb     : 12424  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcs
+Constraint : B=100.978, w=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+w          : 2
+f_value    : 776.910000
+queries    : 8082
+time_sec   : 9.414829
+size(S)    : 66
+rss0_kb    : 11620
+peak_kb    : 21636
+mem_kb     : 10016  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : dcms
+Constraint : B=100.978, w=2, eps=0.1, alpha=2
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+eps        : 0.100000
+w          : 2
+alpha      : 2
+f_value    : 1276.110000
+queries    : 696687
+time_sec   : 940.416399
+size(S)    : 216
+rss0_kb    : 11788
+peak_kb    : 26008
+mem_kb     : 14220  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo9
+Constraint : B=100.978, eps=0.1, mode=best(A,G)
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+eps        : 0.100000
+f_value    : 1069.520000
+queries    : 506144
+time_sec   : 714.389865
+size(S)    : 75
+rss0_kb    : 11792
+peak_kb    : 24800
+mem_kb     : 13008  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : algo10
+Constraint : B=100.978, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+eps        : 0.100000
+f_value    : 991.520000
+queries    : 808145
+time_sec   : 899.978181
+size(S)    : 54
+rss0_kb    : 11788
+peak_kb    : 25100
+mem_kb     : 13312  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : edl
+Constraint : B=100.978, eps=0.1
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+eps        : 0.100000
+f_value    : 1083.640000
+queries    : 14038035
+time_sec   : 19705.579426
+size(S)    : 153
+rss0_kb    : 11640
+peak_kb    : 23952
+mem_kb     : 12312  (peak-baseline)
+CSV        : appended to fb.csv
+Objective  : UNKNOWN
+Alg        : twin_greedy
+Constraint : B=100.978
+Graph      : n=4039, m=176468, undirected=0
+B_factor   : 0.050000
+total_cost : 2019.567074
+B          : 100.978354
+f_value    : 863.110000
+queries    : 884452
+time_sec   : 943.398439
+size(S)    : 55
+rss0_kb    : 11796
+peak_kb    : 24188
+mem_kb     : 12392  (peak-baseline)
+CSV        : appended to fb.csv
