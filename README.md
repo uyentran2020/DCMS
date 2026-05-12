@@ -1,197 +1,249 @@
 # Knapsack-Constrained Submodular Maximization via Dual Cumulative Sets in Streaming
 
-This repository is the official experimental implementation of **Knapsack-Constrained Submodular Maximization via Dual Cumulative Sets in Streaming**.
+This repository contains the experimental C++ implementation used in the paper **“Knapsack-Constrained Submodular Maximization via Dual Cumulative Sets in Streaming.”**
 
-The code implements two proposed streaming algorithms for General Submodular Maximization under a Knapsack constraint (\GSMK):
+The code studies **general submodular maximization under a knapsack constraint (GSMK)** in the streaming setting. It implements the following proposed methods:
 
-- **DCS**: Dual Cumulative Sets-aided Streaming
-- **DCMS**: Dual Cumulative Sets-based Multi-Stream
+- **DCS**: Dual Cumulative Sets, a one-pass streaming algorithm
+- **DCMS**: Dual Cumulative Sets Multi-Stream, a multi-pass streaming algorithm
 
-The implementation evaluates the algorithms on three applications:
+The repository also includes the baseline methods used in the experiments:
+
+- **EDL**
+- **TwinGreedy**
+- **algo9**
+- **algo10**
+
+The implementation supports three benchmark applications:
 
 - **IMK**: Influence Maximization under a Knapsack constraint
 - **MCK**: Maximum Weighted Cut under a Knapsack constraint
 - **RMK**: Revenue Maximization under a Knapsack constraint
 
-The compared baselines include:
+## Repository Structure
 
-- **EDL**
-- **op\_rg\_dknap**
-- **mp\_rgmax**
-- other methods implemented in the repository
+The project is organized around a small set of C++ executables built from `src/main.cpp` together with two preprocessing utilities.
 
-## Dependencies
+### Main executables
 
-- Python 3.x
-- NetworkX
-- Standard Python utilities for reading `.txt`, `.csv`, `.pkl`, and writing result files
+After running `make`, the following binaries are generated:
 
-## The source code is organized as follows:
+- `maxcut`
+- `revenue`
+- `ic`
+- `preproc`
+- `preproc_ic`
 
-`data/` folder:
-- `generate_graph_networkx.py`: used to construct `.pkl` graph files from raw `.txt` or `.csv` edge-list datasets
+### Important files
 
-Main experiment scripts:
-- `dcms_multipass.py`: runs the **DCMS** algorithm
-- `dcs_streaming.py`: runs the **DCS** algorithm
-- `edl_1k.py`: runs the **EDL** baseline
-- `op_rg_dknap.py`: runs the **op_rg_dknap** baseline
-- `mp_rgmax_1k.py`: runs the **mp_rgmax** baseline
+- `Makefile` — build rules for all executables
+- `runIC.sh` — batch commands for IMK experiments on `email.bin` and `fb.bin`
+- `runMC.sh` — batch commands for MCK experiments on `ER.bin`
+- `runMC_Astro.sh` — batch commands for MCK experiments on `Astro.bin`
+- `runRM.sh` — batch commands for RMK experiments on `GrQc.bin`
+- `runRM_Hept.sh` — batch commands for RMK experiments on `Hept.bin`
 
-Input datasets:
-- `facebook.txt`, `Email.txt`: datasets for **Influence Maximization**
-- `Astro.txt`, `ER.txt`: datasets for **Maximum Cut**
-- `GrQc.txt`, `Hept.txt`: datasets for **Revenue Maximization**
+### Input datasets
 
-Generated graph files:
-- `FB.pkl`, `Email.pkl`
-- `Astro.pkl`, `ER.pkl`
-- `GrQc.pkl`, `Hept.pkl`
+The repository currently uses preprocessed binary graph files:
 
-Output files:
-- CSV result files for each dataset and each algorithm, e.g.
-  - `FB_results_dcms_multipass.csv`
-  - `Astro_results_dcs.csv`
-  - `GrQc_results_edl1k.csv`
+- `Astro.bin`
+- `ER.bin`
+- `fb.bin`
+- `email.bin`
+- `GrQc.bin`
+- `Hept.bin`
 
-## Format of input graph
+## Requirements
 
-The raw input graph is given as an edge list stored in `.txt` or `.csv` format.
+To build and run the code, you need:
 
-### Step 1: Generate graph files
-Use `data/generate_graph_networkx.py` to convert raw edge lists into `.pkl` graph files.
+- GNU `g++` with C++17 support
+- GNU `make`
+- OpenMP support in your compiler for the `revenue` and `ic` binaries
+- A Unix-like environment for running the provided shell scripts
 
-### Important notes
-- For **Influence Maximization (IM)** under the IC model, the total incoming edge weight of each node \(u\) must be normalized to 1. Therefore, use:
-  - `--normalize`
-- For **Maximum Cut**, the graph must be symmetric, i.e.
-  \[
-  w(u,v)=w(v,u).
-  \]
-  Therefore, use:
-  - `--symmetric`
+The `Makefile` uses the flags `-std=c++17 -O2 -Wall`, links `pthread`, and enables `-fopenmp` for `revenue` and `ic`.
 
-## To run the source code, follow these steps:
+## Build
 
-### Step 1: Generate datasets
+Compile all executables with:
 
-#### Influence Maximization (IMK): Facebook, Email
 ```bash
-python data/generate_graph_networkx.py --filename facebook.txt --output FB.pkl --normalize
-python data/generate_graph_networkx.py --filename Email.txt --output Email.pkl --normalize
+make
 ```
 
-#### Maximum Cut (MCK): Astro, ER
+This builds:
+
+- `maxcut`
+- `revenue`
+- `ic`
+- `preproc`
+- `preproc_ic`
+
+To remove compiled files:
+
 ```bash
-python data/generate_graph_networkx.py --filename ER.txt --output ER.pkl --symmetric
-python data/generate_graph_networkx.py --filename Astro.txt --output Astro.pkl --symmetric
+make clean
 ```
 
-#### Revenue Maximization (RMK): GrQc, Hept
+## Input Format and Preprocessing
+
+Experiments are run on binary graph files (`*.bin`).
+
+Two preprocessing tools are provided:
+
+- `preproc` — converts a general edge-list input into a `.bin` graph file
+- `preproc_ic` — preprocessing tool for influence maximization graphs; according to the build configuration, it always treats the graph as directed and normalizes incoming weights
+
+If you already have the provided `.bin` files, you can run experiments directly without preprocessing.
+
+## Running Experiments
+
+The executable depends on the application:
+
+- `./ic` for **IMK**
+- `./maxcut` for **MCK**
+- `./revenue` for **RMK**
+
+The general command format is:
+
 ```bash
-python data/generate_graph_networkx.py --filename GrQc.txt --output GrQc.pkl
-python data/generate_graph_networkx.py --filename Hept.txt --output Hept.pkl
+./<binary> --graph <dataset.bin> --B_factor <budget_ratio> --alg <algorithm_name> [other options] --csv <output.csv>
 ```
 
-### Step 2: Run the experiments
+### Common options
 
-## Influence Maximization (IMK)
+- `--graph` — input binary graph file
+- `--B_factor` — budget factor
+- `--alg` — algorithm name (`dcs`, `dcms`, `edl`, `twin_greedy`, `algo9`, `algo10`)
+- `--w` — window parameter used by `dcs` and `dcms`
+- `--alpha` — additional parameter used by `dcms`
+- `--csv` — output CSV file
 
-### Facebook
+---
+
+## 1. Influence Maximization (IMK)
+
+The script `runIC.sh` evaluates:
+
+- `email.bin`
+- `fb.bin`
+
+with budget factors from **0.01 to 0.05**.
+
+The parameter settings used in the script are:
+
+- `w = 2` for `dcs`
+- `w = 2`, `alpha = 2` for `dcms`
+
+### Example
+
 ```bash
-python dcms_multipass.py --graph FB.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --w 2 --output FB_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph FB.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --w 2 --output FB_results_dcs.csv --append
-python edl_1k.py --graph FB.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output FB_results_edl1k.csv --append
-python op_rg_dknap.py --graph FB.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output FB_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph FB.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output FB_results_mp_rgmax.csv --append
+./ic --graph email.bin --B_factor 0.03 --alg dcs --w 2 --csv email.csv
+./ic --graph email.bin --B_factor 0.03 --alg dcms --w 2 --alpha 2 --csv email.csv
+./ic --graph email.bin --B_factor 0.03 --alg edl --csv email.csv
 ```
 
-### Email
+### Run with Slurm
+
 ```bash
-python dcms_multipass.py --graph Email.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --w 2 --output Email_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph Email.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --w 2 --output Email_results_dcs.csv --append
-python edl_1k.py --graph Email.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output Email_results_edl1k.csv --append
-python op_rg_dknap.py --graph Email.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output Email_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph Email.pkl --func influence --B_factors 0.02 0.04 0.06 0.08 0.1 --output Email_results_mp_rgmax.csv --append
+sbatch runIC.sh
 ```
 
-## Maximum Cut (MCK)
+The provided script requests 32 tasks on the `gpu` partition.
 
-### Astro
+---
+
+## 2. Maximum Cut (MCK)
+
+Two scripts are provided:
+
+- `runMC.sh` for `ER.bin`
+- `runMC_Astro.sh` for `Astro.bin`
+
+Both scripts evaluate budget factors from **0.10 to 0.65**, using:
+
+- `w = 2` for `dcs`
+- `w = 2`, `alpha = 2` for `dcms`
+
+### Example
+
 ```bash
-python dcms_multipass.py --graph Astro.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output Astro_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph Astro.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output Astro_results_dcs.csv --append
-python edl_1k.py --graph Astro.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output Astro_results_edl1k.csv --append
-python op_rg_dknap.py --graph Astro.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output Astro_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph Astro.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output Astro_results_mp_rgmax.csv --append
+./maxcut --graph ER.bin --B_factor 0.25 --alg dcs --w 2 --csv er.csv
+./maxcut --graph ER.bin --B_factor 0.25 --alg dcms --w 2 --alpha 2 --csv er.csv
+./maxcut --graph ER.bin --B_factor 0.25 --alg twin_greedy --csv er.csv
 ```
 
-### ER
+### Run with Slurm
+
 ```bash
-python dcms_multipass.py --graph ER.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output ER_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph ER.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output ER_results_dcs.csv --append
-python edl_1k.py --graph ER.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output ER_results_edl1k.csv --append
-python op_rg_dknap.py --graph ER.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output ER_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph ER.pkl --func maxcut --B_factors 0.1 0.15 0.2 0.25 0.3 --output ER_results_mp_rgmax.csv --append
+sbatch runMC.sh
+sbatch runMC_Astro.sh
 ```
 
-## Revenue Maximization (RMK)
+---
 
-### GrQc
+## 3. Revenue Maximization (RMK)
+
+Two scripts are provided:
+
+- `runRM.sh` for `GrQc.bin`
+- `runRM_Hept.sh` for `Hept.bin`
+
+For `GrQc.bin`, the script evaluates budget factors from **0.10 to 0.65**.
+
+For `Hept.bin`, the script keeps only the larger-budget runs active. In particular:
+
+- the smallest budget settings are commented out
+- from `0.35` onward, both `dcs` and `dcms` are included
+- in the `0.30` block, only the baseline methods remain active
+
+### Example
+
 ```bash
-python dcms_multipass.py --graph GrQc.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output GrQc_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph GrQc.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output GrQc_results_dcs.csv --append
-python edl_1k.py --graph GrQc.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output GrQc_results_edl1k.csv --append
-python op_rg_dknap.py --graph GrQc.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output GrQc_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph GrQc.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output GrQc_results_mp_rgmax.csv --append
+./revenue --graph GrQc.bin --B_factor 0.20 --alg dcs --w 2 --csv GrQc.csv
+./revenue --graph GrQc.bin --B_factor 0.20 --alg dcms --w 2 --alpha 2 --csv GrQc.csv
+./revenue --graph GrQc.bin --B_factor 0.20 --alg edl --csv GrQc.csv
 ```
 
-### Hept
+### Run with Slurm
+
 ```bash
-python dcms_multipass.py --graph Hept.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output Hept_results_dcms_multipass.csv --append
-python dcs_streaming.py --graph Hept.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --w 2 --output Hept_results_dcs.csv --append
-python edl_1k.py --graph Hept.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output Hept_results_edl1k.csv --append
-python op_rg_dknap.py --graph Hept.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output Hept_results_op_rg_dknap.csv --append
-python mp_rgmax_1k.py --graph Hept.pkl --func revenue --B_factors 0.1 0.15 0.2 0.25 0.3 --output Hept_results_mp_rgmax.csv --append
+sbatch runRM.sh
+sbatch runRM_Hept.sh
 ```
 
-## Parameters
+## Output
 
-```text
-Options:
---graph <input graph file in .pkl format>
---func <objective function: influence | maxcut | revenue>
---B_factors <list of budget factors>
---w <window parameter used by DCS/DCMS>
---output <output CSV filename>
---append <append results to an existing CSV file>
-```
+Each run appends its results to the CSV file specified by `--csv`.
 
-## Experimental Setup
+The provided scripts generate files such as:
 
-The experiments are conducted on three benchmark applications:
+- `email.csv`
+- `fb.csv`
+- `er.csv`
+- `Astro.csv`
+- `GrQc.csv`
+- `Hept.csv`
 
-- **IMK** on Facebook and Email
-- **MCK** on Astro and ER
-- **RMK** on GrQc and Hept
+## Notes
 
-### Budget factors
-- **IMK**: `0.02, 0.04, 0.06, 0.08, 0.1`
-- **MCK**: `0.1, 0.15, 0.2, 0.25, 0.3`
-- **RMK**: `0.1, 0.15, 0.2, 0.25, 0.3`
-
-### Algorithms compared
-- `dcms_multipass.py`
-- `dcs_streaming.py`
-- `edl_1k.py`
-- `op_rg_dknap.py`
-- `mp_rgmax_1k.py`
-
-### Notes
-- For IMK under the IC model, use normalized incoming edge weights.
-- For MCK, use symmetric edge weights.
-- The parameter `--w 2` is used in the DCS/DCMS experiments shown above.
+- This repository is centered on the compiled C++ implementation and binary datasets.
+- The provided shell scripts reflect the command structure used in the experiments.
+- If you want to use your own datasets, you may need to generate new `.bin` files using `preproc` or `preproc_ic` before running the corresponding executable.
 
 ## Citation
 
-If you use this repository, please cite the corresponding paper.
+If you use this repository, please cite the associated paper:
+
+```bibtex
+@article{tran2026dcs,
+  title   = {Knapsack-Constrained Submodular Maximization via Dual Cumulative Sets in Streaming},
+  author  = {Tran, Uyen T. T. and Ha, Dung T. K. and Pham, Canh V.},
+  journal = {to appear},
+  year    = {2026}
+}
+```
+
+You may replace the placeholder citation above with the final bibliographic entry once the paper is publicly available.
